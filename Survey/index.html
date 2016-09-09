@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sab Miller - Demo Survey</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>  
+
+</head>
+<body>     
+    <div id="wrapper">
+	<br/>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									Información de la muestra
+								</h3>
+							</div>
+							<div class="panel-body">
+								 <div class="row">
+									<div class="col-md-3">
+										<label>¿En qué área está ubicada?</label>
+										<ul class="list-group">
+											<li class="list-group-item">
+												<div class="radio">
+													<label>
+														<input type="radio" name="optionsRadios">
+														Pasillo Principal
+													</label>
+												</div>
+											</li>
+											<li class="list-group-item">
+												<div class="radio">
+													<label>
+														<input type="radio" name="optionsRadios">
+														Neveras, Áreas Frías
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-2">
+										<label>¿Cúantas personas conforman el grupo?</label>
+										<div class="form-group">
+											  <select class="form-control" id="sel1">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+												<option>6</option>
+												<option>7</option>
+												<option>+8</option>
+											  </select>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<label>¿Género?</label>
+										<div class="form-group">
+											<ul class="list-group">
+												<li class="list-group-item">
+													<div class="radio">
+														<label>
+															<input type="radio" name="optionsRadios">
+															Masculino
+														</label>
+													</div>
+												</li>
+												<li class="list-group-item">
+													<div class="radio">
+														<label>
+															<input type="radio" name="optionsRadios">
+															Femenino
+															</label>
+													</div>
+												</li>
+												<li class="list-group-item">
+													<div class="radio">
+														<label>
+															<input type="radio" name="optionsRadios">
+															Ambos
+														</label>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<label>Rango de edad</label>
+										<div class="form-group">
+											<ul class="list-group">
+												<li class="list-group-item">
+													<div class="radio">
+														<label>
+															<input type="radio" name="optionsRadios">
+															18-25
+														</label>
+													</div>
+												</li>
+												<li class="list-group-item">
+													<div class="radio">
+														<label>
+															<input type="radio" name="optionsRadios">
+															26-35
+															</label>
+													</div>
+												</li>
+												<li class="list-group-item">
+													<div class="radio">
+														<label>
+															<input type="radio" name="optionsRadios">
+															36+
+														</label>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<label>Su compra fue realizada por medio de</label>
+										<div class="form-group">
+											<ul class="list-group">
+												<li class="list-group-item">
+													<div class="radio">
+														<label>
+															<input type="radio" name="optionsRadios">
+															<img src="images/cart.png">
+														</label>
+													</div>
+												</li>
+												<li class="list-group-item">
+													<div class="radio">
+														<label>
+															<input type="radio" name="optionsRadios">
+															<img src="images/basket.png">
+															</label>
+													</div>
+												</li>
+												<li class="list-group-item">
+													<div class="radio">
+														<label>
+															<input type="radio" name="optionsRadios">
+															<img src="images/none.png">
+														</label>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>							
+								</div>
+							</div>
+						</div>       
+					</div>
+				</div>			
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									Favor anote que categorías compró o miró
+								</h3>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="table-responsive">
+										<table class="table table-bordered">
+											<thead>
+												<tr>
+													<th>Categorías</th>
+													<th>Cerveza</th>
+													<th>Seco/Ron</th>
+													<th>Bebidas Listas (Ej. Smirnoff Ice)</th>
+													<th>Vinos/Otros Licores</th>
+													<th>Sodas</th>
+													<th>Jugos</th>
+													<th>Otros NO Alcohólicos (Leche, Agua, etc)</th>
+													<th>Snacks</th>
+													<th>Quesos/Embutidos</th>
+													<th>Carnes</th>
+													<th>Otros</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><strong>EN EL PASILLO de Cervezas</strong><br/>Se detuvo a observar pero no compró</td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+												</tr>
+												<tr>
+													<td><strong>EN EL PASILLO</strong><br/>Compró</td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+												</tr>
+												<tr>
+													<td><strong>EN LA CARRETILLA</strong><br/>Llevaba</td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+												</tr>
+											</tbody>
+										</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									¿Cuándo el comprador llegó a la categoría de CERVERZAS cómo se comportaba?
+								</h3>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="table-responsive">
+										<table class="table table-bordered">
+											<tbody>
+												<tr>
+													<td>Se detuvo a mirar las cervezas pero no compró y continuó con su recorrido</td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+												</tr>
+												<tr>
+													<td>Se detuvo a mirar la categoría de cervezas y tomó al menos un producto en su mano</td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+												</tr>
+												<tr>
+													<td>Comparó al menos dos productos de cerveza</td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+												</tr>
+												<tr>
+													<td>Tomo inmediatamente una marca de cerveza en específico (ya sabía lo que buscaba)</td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+												</tr>
+												<tr>
+													<td>Finalmente colocó algún producto de cerveza en su carretilla / cesta / manos</td>
+													<td style="text-align:center"><input type="checkbox" value=""></td>
+												</tr>
+											</tbody>
+										</table>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="panel panel-primary">
+											<div class="panel-heading" style="background-color: #333;border-color: #333">
+												<h3 class="panel-title">
+													Si Contesto que <strong>“SI”</strong> a la pregunta de <strong>“Comparó al menos dos productos”</strong> ¿Qué marcas comparó?
+												</h3>
+											</div>
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-12">
+														<div class="table-responsive">
+														<table class="table table-bordered">
+															<thead>
+																<tr>
+																	<th></th>
+																	<th>Atlas</th>
+																	<th>Atlas Golden Light</th>
+																	<th>Balboa</th>
+																	<th>Balboa ICE</th>
+																	<th>Miller Lite</th>
+																	<th>Panama</th>
+																	<th>Panama Light</th>
+																	<th>Soberana</th>
+																	<th>Coors Light</th>
+																	<th>Otros</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>¿Las comparó?</td>
+																	<td style="text-align:center"><input type="checkbox" value=""></td>
+																	<td style="text-align:center"><input type="checkbox" value=""></td>
+																	<td style="text-align:center"><input type="checkbox" value=""></td>
+																	<td style="text-align:center"><input type="checkbox" value=""></td>
+																	<td style="text-align:center"><input type="checkbox" value=""></td>
+																	<td style="text-align:center"><input type="checkbox" value=""></td>
+																	<td style="text-align:center"><input type="checkbox" value=""></td>
+																	<td style="text-align:center"><input type="checkbox" value=""></td>
+																	<td style="text-align:center"><input type="checkbox" value=""></td>
+																	<td style="text-align:center"><input type="checkbox" value=""></td>
+																</tr>
+															</tbody>
+														</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="panel panel-primary">
+											<div class="panel-heading" style="background-color: #333;border-color: #333">
+												<h3 class="panel-title">
+													¿Qué cosas observó / comparó entre ellas?
+												</h3>
+											</div>
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-12">
+														<div class="table-responsive">
+															<table class="table table-bordered">
+																<thead>
+																	<tr>
+																		<th>Categorías</th>
+																		<th></th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>Marca</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Precio</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Tipo de producto (Amarga/Suave)</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Nivel de Alcohol (Light/Fuerte)</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Temperatura (Frío)</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Empaques</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Promociones</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Otros. Específique</td>
+																		<td style="text-align:center"><input type="text" class="form-control" placeholder="Tamaño, Colores, Peso, etc."></td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="panel panel-primary">
+											<div class="panel-heading" style="background-color: #333;border-color: #333">
+												<h3 class="panel-title">
+													Si Contestó que <strong>“SI”</strong> a la pregunta <strong>“¿Colocó algún producto de cerveza en su carretilla/cesta/manos?”</strong> Indique todas las marcas compradas, empaque y cantidad en la tabla abajo detallada.
+												</h3>
+											</div>
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-12">
+														<div class="table-responsive">
+															<table class="table table-bordered">
+																<thead>
+																	<tr>
+																		<th></th>
+																		<th style="text-align:center" colspan="2">Empaque</th>
+																		<th style="text-align:center" colspan="11">Cantidad</th>
+																	</tr>
+																</thead>
+																<thead>
+																	<tr>
+																		<th></th>
+																		<th>Lata</th>
+																		<th>Botella</th>
+																		<th>1 a 5 Unds.</th>
+																		<th>1 six-pack</th>
+																		<th>2 six-pack</th>
+																		<th>3 six-pack</th>
+																		<th>1 caja (24 Unds.)</th>
+																		<th>2 cajas</th>
+																		<th>3 cajas</th>
+																		<th>Entre 3 y 5 cajas</th>
+																		<th>Más de 5 cajas</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>Atlas</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Atlas Golden Light</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Balboa</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Balboa Ice</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Miller Lite</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Panama Light</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Panama</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Soberana</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Coors Light</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																	<tr>
+																		<td>Otras</td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																		<td style="text-align:center"><input type="checkbox" value=""></td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>					
+				</div>	
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									En caso que sea un grupo: ¿Cómo le pareció que tomaron la decisión de comprar esa marca o empaque?
+								</h3>
+							</div>
+							<div class="panel-body">
+								 <div class="row">
+									<div class="col-md-12">
+										<div class="table-responsive">
+											<table class="table table-bordered">
+												<thead>
+													<tr>
+														<th>
+															Cada uno eligió la marca que le gustaba
+														</th>
+														<th>
+															Decidieron entre todos
+														</th>
+														<th>
+															Decidió el hombre
+														</th>
+														<th>
+															Decidió la mujer
+														</th>
+														<th>
+															Decidieron en base a lo que usualmente toman todos
+														</th>
+														<th>
+															Ya tenían claro que iban a comprar
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td style="text-align:center">
+															<input type="radio" name="optionsRadios">
+														</td>
+														<td style="text-align:center">
+															<input type="radio" name="optionsRadios">
+														</td>
+														<td style="text-align:center"> 
+															<input type="radio" name="optionsRadios">
+														</td>
+														<td style="text-align:center">
+															<input type="radio" name="optionsRadios">
+														</td>
+														<td style="text-align:center">
+															<input type="radio" name="optionsRadios">
+														</td>
+														<td style="text-align:center">
+															<input type="radio" name="optionsRadios">
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>															
+								</div>
+							</div>
+						</div>       
+					</div>
+				</div>				
+			</div>				
+		</div>
+</body>
+</html>
