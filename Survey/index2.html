@@ -1,0 +1,940 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sab Miller - Demo Survey</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <h2>Encuesta en Sitio</h2>
+                </div>
+                <div class="col-md-2">
+                    <h3 id="timeHeader"></h3>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th style="text-align:center">Rey Coronado</th>
+                                    <th style="text-align:center">Rey Centennial</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Responda</strong></td>
+                                    <td style="text-align:center"><input type="radio" name="placeRadio"></td>
+                                    <td style="text-align:center"><input type="radio" name="placeRadio"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Por medio de observación, favor complete la siguiente información
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>¿En qué área está ubicada?</label>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="option1">
+                                                    Pasillo Principal
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="option1">
+                                                    Neveras, Áreas Frías
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <label>¿Cúantas personas conforman el grupo?</label>
+                                    <div class="form-group">
+                                        <select class="form-control" id="sel1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>+8</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label>¿Género?</label>
+                                    <div class="form-group">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="option2">
+                                                        Masculino
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="option2">
+                                                        Femenino
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="option2">
+                                                        Ambos
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label>Rango de edad</label>
+                                    <div class="form-group">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="option3">
+                                                        18-25
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="option3">
+                                                        26-35
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="option3">
+                                                        36+
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Su compra fue realizada por medio de</label>
+                                    <div class="form-group">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="option4">
+                                                        <img src="images/cart.png">
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="option4">
+                                                        <img src="images/basket.png">
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="option4">
+                                                        <img src="images/none.png">
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Usualmente cuantas veces usted diría que
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Diario</th>
+                                                <th>2 a 3 veces a la semana</th>
+                                                <th>1 vez a la semana</th>
+                                                <th>2 o 3 veces al mes</th>
+                                                <th>1 vez al mes</th>
+                                                <th>Menos de 1 vez al mes</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Visita este Supermercado</td>
+                                                <td><input type="radio" name="option2"></td>
+                                                <td><input type="radio" name="option2"></td>
+                                                <td><input type="radio" name="option2"></td>
+                                                <td><input type="radio" name="option2"></td>
+                                                <td><input type="radio" name="option2"></td>
+                                                <td><input type="radio" name="option2"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Compra Cervezas en Supermercados</td>
+                                                <td><input type="radio" name="option3"></td>
+                                                <td><input type="radio" name="option3"></td>
+                                                <td><input type="radio" name="option3"></td>
+                                                <td><input type="radio" name="option3"></td>
+                                                <td><input type="radio" name="option3"></td>
+                                                <td><input type="radio" name="option3"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                ¿Usted acostumbra a realizar su compra de Cervezas en supermercados?
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th style="text-align:center">Si</th>
+                                                    <th style="text-align:center">No</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>¿En qué supermercado se encuentra?</strong></td>
+                                                    <td style="text-align:center"><input type="radio" name="q8Radio"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q8Radio"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                ¿Qué frase considera usted que mejor describe el motivo de su compra el día de hoy?
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Compra de Rutina (Diaria / Semanal / Quincenal / Mensual)</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Compra rápida para algunos productos básicos que necesitaba</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Compras para una ocasión en específico (fiesta, reunión, bbq, cena, etc)</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                ¿Cuál es la principal razón por la que usted escogió este punto de venta el día de hoy, otra razón?
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Principal Razón</th>
+                                                    <th>Otras Razones</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Conveniencia- Ubicación (Cerca de Casa / Trabajo)</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Conveniencia- Horario</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cuenta con Tarjeta de Fidelidad (Puntos de Oro)</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tiene una amplia gama de productos</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ofrece marcas propias del supermercado</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Calidad / Frescura</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Precio / Promociones</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Confianza / Familiaridad</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>La tienda tiene un orden lógico que me permite encontrar rápidamente lo que busco</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Servicio</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Otro</td>
+                                                    <td colspan="2" style="text-align:center"><input type="text" class="form-control" placeholder="Tamaño, Colores, Peso, etc."></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                ¿Qué Marcas o Empaques Compro?
+                                Favor llena las columnas de empaque y cantidad bajo la línea de la marca (s) comprada.
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th style="text-align:center" colspan="2">Empaque</th>
+                                                    <th style="text-align:center" colspan="11">Cantidad</th>
+                                                </tr>
+                                            </thead>
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Lata</th>
+                                                    <th>Botella</th>
+                                                    <th>1 a 5 Unds.</th>
+                                                    <th>1 six-pack</th>
+                                                    <th>2 six-pack</th>
+                                                    <th>3 six-pack</th>
+                                                    <th>1 caja (24 Unds.)</th>
+                                                    <th>2 cajas</th>
+                                                    <th>3 cajas</th>
+                                                    <th>Entre 3 y 5 cajas</th>
+                                                    <th>Más de 5 cajas</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Atlas</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Atlas Golden Light</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Balboa</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Balboa Ice</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Miller Lite</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Panama Light</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Panama</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Soberana</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Coors Light</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Otras</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                ¿Cuál razón diría usted que mejor describe por qué escogió esa Marca / Empaque?
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Principal Razón</th>
+                                                    <th>Otras Razones</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Precio / Promoción
+                                                    <td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Relación Precio / Calidad</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Porque era la que estaba más fría</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Es la que siempre compro</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Es la que toman mis amigos</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Porque tiene un sabor suave</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Porque tiene un sabor fuerte</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Por el nivel de alcohol</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tiene una imagen atractiva</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading" style="background-color: #333;border-color: #333">
+                                            <h3 class="panel-title">
+                                                ¿Cuál sería la principal ocasión que tenía en mente al momento de comprar cerveza el día de hoy?
+                                            </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>PARA RELAJARME </td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>SOCIALIZANDO / PARKING CON AMIGOS / FAMILIARES</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>CENANDO (TARDE/NOCHE)</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>OCASIÓN ESPECIAL (Cumpleaños / Bodas / Aniversarios etc)</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Finalmente colocó algún producto de cerveza en su carretilla / cesta / manos</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading" style="background-color: #333;border-color: #333">
+                                            <h3 class="panel-title">
+                                                Y esta ocasión donde será?
+                                            </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>EN MI CASA </td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>EN CASA DE OTRO</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>CALLE / PARQUE</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>CANCHA DEPORTIVA</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>PLAYA / PISCINA / RIO / PASEOS</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading" style="background-color: #333;border-color: #333">
+                                            <h3 class="panel-title">
+                                                Y Con cuantas personas será:
+                                            </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Yo solo </td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Yo y un grupo menor de 3 personas</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Yo y un grupo de al menos 3 personas</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Para otros (no para mi)</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading" style="background-color: #333;border-color: #333">
+                                            <h3 class="panel-title">
+                                                Y ese grupo son:
+                                            </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Todos Hombre </td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Todos Mujeres</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Grupo Mixto</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading" style="background-color: #333;border-color: #333">
+                                            <h3 class="panel-title">
+                                                Y esta ocasión con cuanto tiempo de antelación la planeo
+                                            </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Hoy </td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Ayer</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Durante la semana</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>El Fin de Semana Pasado</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Hace más de 15 Dias</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading" style="background-color: #333;border-color: #333">
+                                            <h3 class="panel-title">
+                                                Ya tenía planeado que Marcas y Empaques de Cerveza compraría para esta Ocasión?
+                                            </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Si, ya sabía exactamente lo que iba a comprar </td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Tenía una idea de lo que iba a comprar pero no sabia con exactitud </td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>No, no sabía que marcas o empaques compraría</td>
+                                                                    <td style="text-align:center"><input type="radio" name="option10"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Cómo describiría que fue su experiencia en la tienda al comprar la categoría de Cerveza? Favor indique en base a las siguientes frases que tan de acuerdo o en desacuerdo estaría.
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Totalmente de acuerdo</th>
+                                                    <th>De acuerdo</th>
+                                                    <th>Ni de acuerdo / ni en Desacuerdo</th>
+                                                    <th>En Desacuerdo</th>
+                                                    <th>Totalmente en Desacuerdo</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>El pasillo de la cerveza es fácil de localizar / identificar en la tienda</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>El estante de la cerveza está bien ordenado y se ve bien</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Se puede encontrar fácilmente la marca / tipo de cerveza Busco</td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                    <td style="text-align:center"><input type="checkbox" value=""></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //Get Date
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        $('#timeHeader').html("Hora " + hours + ":" + minutes);
+    });
+</script>
