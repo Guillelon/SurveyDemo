@@ -65,43 +65,43 @@
                                                 <td class="col-md-2">
                                                     <input type="text" class="form-control" placeholder="">
                                                 </td>
-                                            </tr>   
+                                            </tr>
                                             <tr>
                                                 <td style="text-align:center"><strong>1:00 PM</strong></td>
                                                 <td class="col-md-2">
                                                     <input type="text" class="form-control" placeholder="">
                                                 </td>
-                                            </tr>   
+                                            </tr>
                                             <tr>
                                                 <td style="text-align:center"><strong>2:00 PM</strong></td>
                                                 <td class="col-md-2">
                                                     <input type="text" class="form-control" placeholder="">
                                                 </td>
-                                            </tr> 
+                                            </tr>
                                             <tr>
                                                 <td style="text-align:center"><strong>3:00 PM</strong></td>
                                                 <td class="col-md-2">
                                                     <input type="text" class="form-control" placeholder="">
                                                 </td>
-                                            </tr> 
+                                            </tr>
                                             <tr>
                                                 <td style="text-align:center"><strong>4:00 PM</strong></td>
                                                 <td class="col-md-2">
                                                     <input type="text" class="form-control" placeholder="">
                                                 </td>
-                                            </tr> 
+                                            </tr>
                                             <tr>
                                                 <td style="text-align:center"><strong>5:00 PM</strong></td>
                                                 <td class="col-md-2">
                                                     <input type="text" class="form-control" placeholder="">
                                                 </td>
-                                            </tr> 
+                                            </tr>
                                             <tr>
                                                 <td style="text-align:center"><strong>6:00 PM</strong></td>
                                                 <td class="col-md-2">
                                                     <input type="text" class="form-control" placeholder="">
                                                 </td>
-                                            </tr>   
+                                            </tr>
                                             <tr>
                                                 <td style="text-align:center"><strong>7:00 PM</strong></td>
                                                 <td class="col-md-2">
@@ -119,7 +119,7 @@
                                                 <td class="col-md-2">
                                                     <input type="text" class="form-control" placeholder="">
                                                 </td>
-                                            </tr> 
+                                            </tr>
                                             <tr>
                                                 <td style="text-align:center"><strong>10:00 PM</strong></td>
                                                 <td class="col-md-2">
@@ -137,9 +137,26 @@
                                                 <td class="col-md-2">
                                                     <input type="text" class="form-control" placeholder="">
                                                 </td>
-                                            </tr>                                   
+                                            </tr>
                                         </tbody>
                                     </table>
+                                </div>
+                                <div class="col-md-6" >
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h3 id="surveyCount">Encuestas Realizadas:</h3>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <h3 id="observationCount">Observaciones Realizadas:</h3>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <div style="text-align:center">
+                                        <a href="../Survey/index.html"><button class="btn btn-info">Crear Observación</button></a>
+                                        <a href="../Survey/index2.html"><button class="btn btn-info">Crear Encuesta</button></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -164,7 +181,15 @@
             month = '0' + month;
         $('#timeHeader').html("Fecha: " + days + "/" + month + "/" + year);
 
-        //localStorage.setItem("lastname", "Smith");
-        console.log(localStorage.lastname);
+        if (localStorage.surveyCount == null) {
+            localStorage.setItem("surveyCount", "0");
+        }
+
+        if (localStorage.observationCount == null) {
+            localStorage.setItem("observationCount", "0");
+        }
+
+        $('#surveyCount').html('Encuestas Realizadas: ' + localStorage.surveyCount);
+        $('#observationCount').html('Observaciones Realizadas: ' + localStorage.observationCount);
     });
 </script>
