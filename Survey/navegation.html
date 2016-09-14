@@ -17,8 +17,11 @@
         <br />
         <div class="container">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <img src="images/sabMillerLogo.png" width="125" height="85" />
+                </div>
+                <div class="col-md-4 col-md-offset-4" style="text-align:right">
+                    <h3 id="timeHeader" style="text-align:right">21 de agosto</h3>
                 </div>
             </div>
             <br />
@@ -31,6 +34,114 @@
                             </h3>
                         </div>
                         <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Horarios
+                                                </th>
+                                                <th>
+                                                    Cantidad
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align:center"><strong>10:00 AM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center"><strong>11:00 AM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center"><strong>12:00 PM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr>   
+                                            <tr>
+                                                <td style="text-align:center"><strong>1:00 PM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr>   
+                                            <tr>
+                                                <td style="text-align:center"><strong>2:00 PM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td style="text-align:center"><strong>3:00 PM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td style="text-align:center"><strong>4:00 PM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td style="text-align:center"><strong>5:00 PM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td style="text-align:center"><strong>6:00 PM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr>   
+                                            <tr>
+                                                <td style="text-align:center"><strong>7:00 PM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center"><strong>8:00 PM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center"><strong>9:00 PM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td style="text-align:center"><strong>10:00 PM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center"><strong>11:00 PM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center"><strong>12:00 AM</strong></td>
+                                                <td class="col-md-2">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr>                                   
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -39,3 +150,21 @@
     </div>
 </body>
 </html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //Get Date
+        var date = new Date();
+        var days = date.getDay();
+        var month = date.getMonth();
+        var year = date.getFullYear();
+        if (days.toString().length < 2)
+            days = '0' + days;
+        if (month.toString().length < 2)
+            month = '0' + month;
+        $('#timeHeader').html("Fecha: " + days + "/" + month + "/" + year);
+
+        //localStorage.setItem("lastname", "Smith");
+        console.log(localStorage.lastname);
+    });
+</script>
