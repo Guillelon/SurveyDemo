@@ -360,39 +360,41 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>Conveniencia- Ubicación (Cerca de Casa / Trabajo)</td>
-                                                        <td style="text-align:center"><input type="checkbox" name="q15cbox"  value="O1"></td>
-                                                        <td style="text-align:center"><input type="checkbox"  name="q15cbox"  value="O2"></td>
+
+
+                                                        <td style="text-align:center"><input type="radio" name="q15Radio"  value="O1"></td>
+                                                        <td style="text-align:center"><input type="checkbox"  name="q15cbox"  value="O1"></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Conveniencia- Horario</td>
-                                                        <td style="text-align:center"><input type="checkbox" name="q15cbox"  value="O3"></td>
-                                                        <td style="text-align:center"><input type="checkbox"  name="q15cbox"  value="O4"></td>
+                                                        <td style="text-align:center"><input type="radio" name="q15Radio"  value="O2"></td>
+                                                        <td style="text-align:center"><input type="checkbox"  name="q15cbox"  value="O2"></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Tiene una amplia gama de productos</td>
-                                                        <td style="text-align:center"><input type="checkbox" name="q15cbox"  value="O5"></td>
-                                                        <td style="text-align:center"><input type="checkbox"  name="q15cbox"  value="O6"></td>
+                                                        <td style="text-align:center"><input type="radio" name="q15Radio"  value="O3"></td>
+                                                        <td style="text-align:center"><input type="checkbox"  name="q15cbox"  value="O3"></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Precio / Promociones</td>
-                                                        <td style="text-align:center"><input type="checkbox" name="q15cbox"  value="O7"></td>
-                                                        <td style="text-align:center"><input type="checkbox"  name="q15cbox"  value="O8"></td>
+                                                        <td style="text-align:center"><input type="radio" name="q15Radio"  value="04"></td>
+                                                        <td style="text-align:center"><input type="checkbox"  name="q15cbox"  value="04"></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Confianza / Familiaridad</td>
-                                                        <td style="text-align:center"><input type="checkbox" name="q15cbox"  value="O9"></td>
-                                                        <td style="text-align:center"><input type="checkbox"  name="q15cbox"  value="O10"></td>
+                                                        <td style="text-align:center"><input type="radio" name="q15Radio"  value="O5"></td>
+                                                        <td style="text-align:center"><input type="checkbox"  name="q15cbox"  value="O5"></td>
                                                     </tr>
                                                     <tr>
                                                         <td>La tienda tiene un orden lógico que me permite encontrar rápidamente lo que busco</td>
                                                      
-                                                        <td style="text-align:center"><input type="checkbox" name="q15cbox"  value="O11"></td>
-                                                        <td style="text-align:center"><input type="checkbox"  name="q15cbox"  value="O12"></td>
+                                                        <td style="text-align:center"><input type="radio" name="q15Radio"  value="O6"></td>
+                                                        <td style="text-align:center"><input type="checkbox"  name="q15cbox"  value="O6"></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Servicio</td>
-                                                        <td style="text-align:center"><input type="checkbox" name="q15cbox"  value="O13"></td>
-                                                        <td style="text-align:center"><input type="checkbox"  name="q15cbox"  value="O14"></td>
+                                                        <td style="text-align:center"><input type="radio" name="q15Radio"  value="O7"></td>
+                                                        <td style="text-align:center"><input type="checkbox"  name="q15cbox"  value="O7"></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Otro</td>
@@ -1128,6 +1130,9 @@ obj = obj + '"Q12" : "' + $('input:radio[name=q12Radio]:checked').val() + '",';
 obj = obj + '"Q13" : "' + $('input:radio[name=q13Radio]:checked').val() + '",';
 obj = obj + '"Q14" : "' + $('input:radio[name=q14Radio]:checked').val() + '",';
 
+obj = obj + '"Q15A" : "' + $('input:radio[name=q15Radio]:checked').val() + '",';
+
+
   var q15values = [];
     var q15fields = $('input:checkbox[name="q15cbox"]:checked');
     for(var i = 0; i < q15fields.length; i++) {
@@ -1139,7 +1144,7 @@ obj = obj + '"Q14" : "' + $('input:radio[name=q14Radio]:checked').val() + '",';
     if(q15text.length>0)
         q15values.push(q15text);
 
-obj = obj + '"Q15" : "' + q15values + '",';
+obj = obj + '"Q15B" : "' + q15values + '",';
 
   var q16values = [];
     var q16fields = $('input:checkbox[name="q16cbox"]:checked');
