@@ -728,8 +728,12 @@
 
  function save() {
 
-var obj = '{';
-       
+    
+var currentDate = new Date();
+var month = currentDate.getMonth() + 1;
+
+var obj = '{' + '"DATE" : "' + currentDate.getDate() + "/" + month + "/" + currentDate.getFullYear() + " " + currentDate.getHours() + ":" + 
+currentDate.getMinutes() + '",';
 obj = obj + '"Q1" : "' + $('input:radio[name=q1Radio]:checked').val() + '",';
 obj = obj + '"Q2" : "' + $('input:radio[name=q2Radio]:checked').val() + '",';
 obj = obj + '"Q3" : "' + $("#sel1").val() + '",';

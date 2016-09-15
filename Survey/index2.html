@@ -1042,28 +1042,28 @@
                                             <tbody>
                                                 <tr>
                                                     <td>El pasillo de la cerveza es fácil de localizar / identificar en la tienda</td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q35cbox" value="O1"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q35cbox" value="O2"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q35cbox" value="O3"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q35cbox" value="O4"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q35cbox" value="O5"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q35Radio" value="O1"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q35Radio" value="O2"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q35Radio" value="O3"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q35Radio" value="O4"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q35Radio" value="O5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>El estante de la cerveza está bien ordenado y se ve bien</td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q36cbox" value="O1"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q36cbox" value="O2"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q36cbox" value="O3"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q36cbox" value="O4"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q36cbox" value="O5"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q36Radio" value="O1"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q36Radio" value="O2"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q36Radio" value="O3"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q36Radio" value="O4"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q36Radio" value="O5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Se puede encontrar fácilmente la marca / tipo de cerveza Busco</td>
                                                     
-                                                    <td style="text-align:center"><input type="checkbox" name="q37cbox" value="O1"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q37cbox" value="O2"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q37cbox" value="O3"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q37cbox" value="O4"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q37cbox" value="O5"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q37Radio" value="O1"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q37Radio" value="O2"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q37Radio" value="O3"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q37Radio" value="O4"></td>
+                                                    <td style="text-align:center"><input type="radio" name="q37Radio" value="O5"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1108,7 +1108,11 @@
 
 function save() {
 
-var obj = '{';
+var currentDate = new Date();
+var month = currentDate.getMonth() + 1;
+
+var obj = '{' + '"DATE" : "' + currentDate.getDate() + "/" + month + "/" + currentDate.getFullYear() + " " + currentDate.getHours() + ":" + 
+currentDate.getMinutes() + '",';
 obj = obj + '"Q1" : "' + $('input:radio[name=q1Radio]:checked').val() + '",';
 obj = obj + '"Q2" : "' + $('input:radio[name=q2Radio]:checked').val() + '",';
 obj = obj + '"Q3" : "' + $("#sel1").val() + '",';
@@ -1270,29 +1274,13 @@ obj = obj + '"Q33" : "' + $('input:radio[name=q33Radio]:checked').val() + '",';
 
 obj = obj + '"Q34" : "' + $('input:radio[name=q34Radio]:checked').val() + '",';
 
- var q35values = [];
-    var q35fields = $('input:checkbox[name="q35cbox"]:checked');
-    for(var i = 0; i < q35fields.length; i++) {
-        q35values.push(q35fields[i].value);
-    }
+obj = obj + '"Q35" : "' + $('input:radio[name=q35Radio]:checked').val() + '",';
 
-obj = obj + '"Q35" : "' + q35values + '",';
+obj = obj + '"Q36" : "' + $('input:radio[name=q36Radio]:checked').val() + '",';
 
- var q36values = [];
-    var q36fields = $('input:checkbox[name="q36cbox"]:checked');
-    for(var i = 0; i < q36fields.length; i++) {
-        q36values.push(q36fields[i].value);
-    }
+obj = obj + '"Q37" : "' + $('input:radio[name=q37Radio]:checked').val() + '"}';
 
-obj = obj + '"Q36" : "' + q36values + '",';
 
- var q37values = [];
-    var q37fields = $('input:checkbox[name="q37cbox"]:checked');
-    for(var i = 0; i < q37fields.length; i++) {
-        q37values.push(q37fields[i].value);
-    }
-
-obj = obj + '"Q37" : "' + q37values + '"}';
 
 //get observationNumber
 if (localStorage.surveyCount ) {
@@ -1304,6 +1292,6 @@ if (localStorage.surveyCount ) {
 // Store
 localStorage.setItem("survey" + localStorage.surveyCount  , obj);
 
-} 
+}
 
 </script>
