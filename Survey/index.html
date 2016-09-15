@@ -773,9 +773,10 @@
         var day = (new Date).getDay();
         if (localStorage.getItem("globalCounter" + "-" + day) === null) {
             localStorage.setItem("globalCounter" + "-" + day, 0);
+            $('#counterLabel').html('0');
         }
         else {
-            var globalCounter = parseInt(localStorage.getItem("globalCounter") + "-" + day);
+            var globalCounter = parseInt(localStorage.getItem("globalCounter" + "-" + day));
             $('#counterLabel').html(globalCounter);
         }
 
@@ -822,8 +823,12 @@
 
     function save() {
 
-        var obj = '{';
 
+        var currentDate = new Date();
+        var month = currentDate.getMonth() + 1;
+
+        var obj = '{' + '"DATE" : "' + currentDate.getDate() + "/" + month + "/" + currentDate.getFullYear() + " " + currentDate.getHours() + ":" +
+        currentDate.getMinutes() + '",';
         obj = obj + '"Q1" : "' + $('input:radio[name=q1Radio]:checked').val() + '",';
         obj = obj + '"Q2" : "' + $('input:radio[name=q2Radio]:checked').val() + '",';
         obj = obj + '"Q3" : "' + $("#sel1").val() + '",';
@@ -833,7 +838,7 @@
 
         var q7values = [];
         var q7fields = $('input:checkbox[name="q7cbox"]:checked');
-        for (var i = 0; i < q7fields.length; i++) {
+        for(var i = 0; i < q7fields.length; i++) {
             q7values.push(q7fields[i].value);
         }
 
@@ -973,7 +978,6 @@
         }
 
         obj = obj + '"Q22" : "' + q22values + '",';
-
         obj = obj + '"Q23" : "' + $('input:radio[name=q23Radio]:checked').val() + '"}';
 
 
@@ -990,6 +994,5 @@
         alert("La observación se guardó con éxito");
         window.scrollTo(0, 0);
         location.reload();
-
     }
 </script>
