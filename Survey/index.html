@@ -11,14 +11,53 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <style>
+        #sticky {
+        }
+
+            #sticky.stick {
+                margin-top: 0 !important;
+                position: fixed;
+                top: 0;
+                z-index: 10000;
+                border-radius: 0 0 0.5em 0.5em;
+            }
+    </style>
 </head>
 <body>
     <div id="wrapper">
         <br />
         <div class="container">
             <div class="row">
-                <div class="col-md-10">
+                <div class="col-md-4">
+                    <a href="../Survey/navegation.html"><button class="btn btn-default">Regresar</button></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
                     <h2>Observaciones en Sitio</h2>
+                </div>
+                <div class="col-md-3">
+                    <div id="sticky-anchor"></div>
+                    <div id="sticky">
+                        <div class="panel panel-primary">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img id="counterPlus" src="images/plus.png" height="50" width="50" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img id="counterMinus" src="images/minus.png" height="50" width="50" />
+                                    </div>
+                                    <div class="col-md-4" style="text-align:center">
+                                        <h2><label id="counterLabel">0</label></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
                 </div>
                 <div class="col-md-2">
                     <h3 id="timeHeader"></h3>
@@ -63,7 +102,7 @@
                                             <div class="radio">
                                                 <label>
                                                     <input type="radio" name="q2Radio" value="O1">
-                                                    Pasillo Principal
+                                                    Pasillo Principal (Área Caliente)
                                                 </label>
                                             </div>
                                         </li>
@@ -71,7 +110,7 @@
                                             <div class="radio">
                                                 <label>
                                                     <input type="radio" name="q2Radio" value="O2">
-                                                    Neveras, Áreas Frías
+                                                    Área Secundaria (Neveras, Área Fría)
                                                 </label>
                                             </div>
                                         </li>
@@ -100,7 +139,7 @@
                                                 <div class="radio">
                                                     <label>
                                                         <input type="radio" name="q4Radio" value="O1">
-                                                        Masculino
+                                                        Hombres
                                                     </label>
                                                 </div>
                                             </li>
@@ -108,7 +147,7 @@
                                                 <div class="radio">
                                                     <label>
                                                         <input type="radio" name="q4Radio" value="O2">
-                                                        Femenino
+                                                        Mujeres
                                                     </label>
                                                 </div>
                                             </li>
@@ -138,7 +177,7 @@
                                             <li class="list-group-item">
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="q5Radio"  value="O2">
+                                                        <input type="radio" name="q5Radio" value="O2">
                                                         26-35
                                                     </label>
                                                 </div>
@@ -147,7 +186,7 @@
                                                 <div class="radio">
                                                     <label>
                                                         <input type="radio" name="q5Radio" value="O3">
-                                                        36+
+                                                        35+
                                                     </label>
                                                 </div>
                                             </li>
@@ -209,11 +248,11 @@
                                                     <th>Categorías</th>
                                                     <th>Cerveza</th>
                                                     <th>Seco/Ron</th>
-                                                    <th>Bebidas Listas (Ej. Smirnoff Ice)</th>
+                                                    <th>Bebidas Listas Para Tomar (Ej. Smirnoff Ice)</th>
                                                     <th>Vinos/Otros Licores</th>
                                                     <th>Sodas</th>
                                                     <th>Jugos</th>
-                                                    <th>Otros NO Alcohólicos (Leche, Agua, etc)</th>
+                                                    <th>Otros NO Alcohólicos (Leche, Agua, Te Frío, etc)</th>
                                                     <th>Snacks</th>
                                                     <th>Quesos/Embutidos</th>
                                                     <th>Carnes</th>
@@ -223,45 +262,45 @@
                                             <tbody>
                                                 <tr>
                                                     <td><strong>EN EL PASILLO de Cervezas</strong><br />Se detuvo a observar pero no compró</td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox"  value="O1"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox"  value="O2"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox"  value="O3"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox"  value="O4"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox"  value="O5"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox" value="O1"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox" value="O2"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox" value="O3"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox" value="O4"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox" value="O5"></td>
                                                     <td style="text-align:center"><input type="checkbox" name="q7cbox" value="O6"></td>
                                                     <td style="text-align:center"><input type="checkbox" name="q7cbox" value="O7"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox"  value="08"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox"  value="O9"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox"  value="O10"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox"  value="O11"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox" value="08"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox" value="O9"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox" value="O10"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q7cbox" value="O11"></td>
                                                 </tr>
                                                 <tr>
                                                     <td><strong>EN EL PASILLO</strong><br />Compró</td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox"  value="O1"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox"  value="O2"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox"  value="O3"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox"  value="O4"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox"  value="O5"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox"  value="O6"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox"  value="O7"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox"  value="O8"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox"  value="O9"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox"  value="O10"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox"  value="O11"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox" value="O1"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox" value="O2"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox" value="O3"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox" value="O4"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox" value="O5"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox" value="O6"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox" value="O7"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox" value="O8"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox" value="O9"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox" value="O10"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q8cbox" value="O11"></td>
                                                 </tr>
                                                 <tr>
                                                     <td><strong>EN LA CARRETILLA</strong><br />Llevaba</td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox"  value="O1"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox"  value="O2"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox"  value="O3"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox"  value="O4"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox"  value="O5"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox"  value="O6"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox"  value="O7"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox"  value="O8"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox"  value="O9"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox"  value="O10"></td>
-                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox"  value="O11"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox" value="O1"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox" value="O2"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox" value="O3"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox" value="O4"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox" value="O5"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox" value="O6"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox" value="O7"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox" value="O8"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox" value="O9"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox" value="O10"></td>
+                                                    <td style="text-align:center"><input type="checkbox" name="q9cbox" value="O11"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -327,7 +366,7 @@
                                                         <table class="table table-bordered">
                                                             <thead>
                                                                 <tr>
-                                                                    <th></th>
+                                                                    <th>Categorías</th>
                                                                     <th>Atlas</th>
                                                                     <th>Atlas Golden Light</th>
                                                                     <th>Balboa</th>
@@ -343,16 +382,16 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td>¿Que Marca(s) Comparó?</td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox"  value="O1"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox"  value="O2"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox"  value="O3"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox"  value="O4"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox"  value="O5"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox"  value="O6"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox"  value="O7"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox"  value="O8"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox"  value="O9"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox"  value="O10"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox" value="O1"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox" value="O2"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox" value="O3"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox" value="O4"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox" value="O5"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox" value="O6"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox" value="O7"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox" value="O8"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox" value="O9"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q11cbox" value="O10"></td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
@@ -412,7 +451,7 @@
                                                                     <td style="text-align:center"><input type="checkbox" name="q12cbox" value="O7"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Otros. Específique</td>
+                                                                    <td>Otros? Cuál? Específique</td>
                                                                     <td style="text-align:center"><input type="text" name="q12text" class="form-control" placeholder="Tamaño, Colores, Peso, etc."></td>
                                                                 </tr>
                                                             </tbody>
@@ -440,7 +479,7 @@
                                                             <thead>
                                                                 <tr>
                                                                     <th></th>
-                                                                    <th style="text-align:center" colspan="2">Empaque</th>
+                                                                    <th style="text-align:center" colspan="2">Qué Empque Compró</th>
                                                                     <th style="text-align:center" colspan="11">Cantidad</th>
                                                                 </tr>
                                                             </thead>
@@ -455,7 +494,6 @@
                                                                     <th>3 six-pack</th>
                                                                     <th>1 caja (24 Unds.)</th>
                                                                     <th>2 cajas</th>
-                                                                    <th>3 cajas</th>
                                                                     <th>Entre 3 y 5 cajas</th>
                                                                     <th>Más de 5 cajas</th>
                                                                 </tr>
@@ -463,7 +501,7 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td>Atlas</td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q13cbox" value=" O1"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q13cbox" value="O1"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q13cbox" value="O2"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q13cbox" value="O3"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q13cbox" value="O4"></td>
@@ -473,11 +511,10 @@
                                                                     <td style="text-align:center"><input type="checkbox" name="q13cbox" value="O8"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q13cbox" value="O9"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q13cbox" value="O10"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q13cbox" value="O11"></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Atlas Golden Light</td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q14cbox" value=" O1"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q14cbox" value="O1"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q14cbox" value="O2"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q14cbox" value="O3"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q14cbox" value="O4"></td>
@@ -487,11 +524,10 @@
                                                                     <td style="text-align:center"><input type="checkbox" name="q14cbox" value="O8"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q14cbox" value="O9"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q14cbox" value="O10"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q14cbox" value="O11"></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Balboa</td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q15cbox" value=" O1"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q15cbox" value="O1"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q15cbox" value="O2"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q15cbox" value="O3"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q15cbox" value="O4"></td>
@@ -501,11 +537,10 @@
                                                                     <td style="text-align:center"><input type="checkbox" name="q15cbox" value="O8"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q15cbox" value="O9"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q15cbox" value="O10"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q15cbox" value="O11"></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Balboa Ice</td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q16cbox" value=" O1"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q16cbox" value="O1"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q16cbox" value="O2"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q16cbox" value="O3"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q16cbox" value="O4"></td>
@@ -515,11 +550,10 @@
                                                                     <td style="text-align:center"><input type="checkbox" name="q16cbox" value="O8"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q16cbox" value="O9"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q16cbox" value="O10"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q16cbox" value="O11"></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Miller Lite</td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q17cbox" value=" O1"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q17cbox" value="O1"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q17cbox" value="O2"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q17cbox" value="O3"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q17cbox" value="O4"></td>
@@ -529,11 +563,10 @@
                                                                     <td style="text-align:center"><input type="checkbox" name="q17cbox" value="O8"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q17cbox" value="O9"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q17cbox" value="O10"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q17cbox" value="O11"></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Panama Light</td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q18cbox" value=" O1"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q18cbox" value="O1"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q18cbox" value="O2"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q18cbox" value="O3"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q18cbox" value="O4"></td>
@@ -543,11 +576,10 @@
                                                                     <td style="text-align:center"><input type="checkbox" name="q18cbox" value="O8"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q18cbox" value="O9"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q18cbox" value="O10"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q18cbox" value="O11"></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Panama</td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q19cbox" value=" O1"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q19cbox" value="O1"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q19cbox" value="O2"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q19cbox" value="O3"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q19cbox" value="O4"></td>
@@ -557,11 +589,10 @@
                                                                     <td style="text-align:center"><input type="checkbox" name="q19cbox" value="O8"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q19cbox" value="O9"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q19cbox" value="O10"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q19cbox" value="O11"></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Soberana</td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q20cbox" value=" O1"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q20cbox" value="O1"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q20cbox" value="O2"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q20cbox" value="O3"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q20cbox" value="O4"></td>
@@ -571,11 +602,10 @@
                                                                     <td style="text-align:center"><input type="checkbox" name="q20cbox" value="O8"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q20cbox" value="O9"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q20cbox" value="O10"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q20cbox" value="O11"></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Coors Light</td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q21cbox" value=" O1"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q21cbox" value="O1"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q21cbox" value="O2"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q21cbox" value="O3"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q21cbox" value="O4"></td>
@@ -585,11 +615,10 @@
                                                                     <td style="text-align:center"><input type="checkbox" name="q21cbox" value="O8"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q21cbox" value="O9"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q21cbox" value="O10"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q21cbox" value="O11"></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Otras</td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q22cbox" value=" O1"></td>
+                                                                    <td style="text-align:center"><input type="checkbox" name="q22cbox" value="O1"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q22cbox" value="O2"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q22cbox" value="O3"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q22cbox" value="O4"></td>
@@ -599,7 +628,6 @@
                                                                     <td style="text-align:center"><input type="checkbox" name="q22cbox" value="O8"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q22cbox" value="O9"></td>
                                                                     <td style="text-align:center"><input type="checkbox" name="q22cbox" value="O10"></td>
-                                                                    <td style="text-align:center"><input type="checkbox" name="q22cbox" value="O11"></td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
@@ -724,178 +752,244 @@
                 $('#q10area').hide();
             }
         });
+
+        function sticky_relocate() {
+            var window_top = $(window).scrollTop();
+            var div_top = $('#sticky-anchor').offset().top;
+            if (window_top > div_top) {
+                $('#sticky').addClass('stick');
+                $('#sticky-anchor').height($('#sticky').outerHeight());
+            } else {
+                $('#sticky').removeClass('stick');
+                $('#sticky-anchor').height(0);
+            }
+        }
+
+        $(function () {
+            $(window).scroll(sticky_relocate);
+            sticky_relocate();
+        });
+
+        var day = (new Date).getDay();
+        if (localStorage.getItem("globalCounter" + "-" + day) === null) {
+            localStorage.setItem("globalCounter" + "-" + day, 0);
+        }
+        else {
+            var globalCounter = parseInt(localStorage.getItem("globalCounter") + "-" + day);
+            $('#counterLabel').html(globalCounter);
+        }
+
+        $('#counterPlus').click(function () {
+            var counter = parseInt($('#counterLabel').html());
+            counter = counter + 1;
+            $('#counterLabel').html(counter);
+
+            var day = (new Date).getDay();
+
+            var hour = (new Date()).getHours();
+            if (localStorage.getItem("counter" + hour + "-" + day) === null) {
+                localStorage.setItem("counter" + hour + "-" + day, 1);
+            }
+            else {
+                var counterInHour = parseInt(localStorage.getItem("counter" + hour + "-" + day));
+                localStorage.setItem("counter" + hour + "-" + day, counterInHour + 1);
+            }
+
+            var globalCounter = parseInt(localStorage.getItem("globalCounter" + "-" + day));
+            localStorage.setItem("globalCounter" + "-" + day, globalCounter + 1);
+        });
+
+        $('#counterMinus').click(function () {
+            var counter = parseInt($('#counterLabel').html());
+            if (counter > 0)
+                counter = counter - 1;
+            $('#counterLabel').html(counter);
+
+            var hour = (new Date()).getHours();
+            if (localStorage.getItem("counter" + hour + "-" + day) === null) {
+
+            }
+            else {
+                var counterInHour = parseInt(localStorage.getItem("counter" + hour + "-" + day));
+                if (counterInHour > 0)
+                    localStorage.setItem("counter" + hour + "-" + day, counterInHour - 1);
+            }
+            var globalCounter = parseInt(localStorage.getItem("globalCounter" + "-" + day));
+            if (globalCounter > 0)
+                localStorage.setItem("globalCounter" + "-" + day, globalCounter - 1);
+        });
     });
 
- function save() {
+    function save() {
 
-var obj = '{';
-       
-obj = obj + '"Q1" : "' + $('input:radio[name=q1Radio]:checked').val() + '",';
-obj = obj + '"Q2" : "' + $('input:radio[name=q2Radio]:checked').val() + '",';
-obj = obj + '"Q3" : "' + $("#sel1").val() + '",';
-obj = obj + '"Q4" : "' + $('input:radio[name=q4Radio]:checked').val() + '",';
-obj = obj + '"Q5" : "' + $('input:radio[name=q5Radio]:checked').val() + '",';
-obj = obj + '"Q6" : "' + $('input:radio[name=q6Radio]:checked').val() + '",';
-  
-    var q7values = [];
-    var q7fields = $('input:checkbox[name="q7cbox"]:checked');
-    for(var i = 0; i < q7fields.length; i++) {
-        q7values.push(q7fields[i].value);
+        var obj = '{';
+
+        obj = obj + '"Q1" : "' + $('input:radio[name=q1Radio]:checked').val() + '",';
+        obj = obj + '"Q2" : "' + $('input:radio[name=q2Radio]:checked').val() + '",';
+        obj = obj + '"Q3" : "' + $("#sel1").val() + '",';
+        obj = obj + '"Q4" : "' + $('input:radio[name=q4Radio]:checked').val() + '",';
+        obj = obj + '"Q5" : "' + $('input:radio[name=q5Radio]:checked').val() + '",';
+        obj = obj + '"Q6" : "' + $('input:radio[name=q6Radio]:checked').val() + '",';
+
+        var q7values = [];
+        var q7fields = $('input:checkbox[name="q7cbox"]:checked');
+        for (var i = 0; i < q7fields.length; i++) {
+            q7values.push(q7fields[i].value);
+        }
+
+        obj = obj + '"Q7" : "' + q7values + '",';
+
+
+        var q8values = [];
+        var q8fields = $('input:checkbox[name="q8cbox"]:checked');
+        for (var i = 0; i < q8fields.length; i++) {
+            q8values.push(q8fields[i].value);
+        }
+
+        obj = obj + '"Q8" : "' + q8values + '",';
+
+        var q9values = [];
+        var q9fields = $('input:checkbox[name="q9cbox"]:checked');
+        for (var i = 0; i < q9fields.length; i++) {
+            q9values.push(q9fields[i].value);
+        }
+        obj = obj + '"Q9" : "' + q9values + '",';
+
+
+        var q10values = [];
+        var q10fields = $('input:checkbox[name="q10cbox"]:checked');
+        for (var i = 0; i < q10fields.length; i++) {
+            q10values.push(q10fields[i].value);
+        }
+
+        obj = obj + '"Q10" : "' + q10values + '",';
+
+        var q11values = [];
+        var q11fields = $('input:checkbox[name="q11cbox"]:checked');
+        for (var i = 0; i < q11fields.length; i++) {
+            q11values.push(q11fields[i].value);
+        }
+
+        obj = obj + '"Q11" : "' + q11values + '",';
+
+
+        var q12values = [];
+        var q12fields = $('input:checkbox[name="q12cbox"]:checked');
+        for (var i = 0; i < q12fields.length; i++) {
+            q12values.push(q12fields[i].value);
+        }
+
+        var q12text = $('input:text[name="q12text"]').val();
+
+        if (q12text.length > 0)
+            q12values.push(q12text);
+
+
+        obj = obj + '"Q12" : "' + q12values + '",';
+
+
+
+        var q13values = [];
+        var q13fields = $('input:checkbox[name="q13cbox"]:checked');
+        for (var i = 0; i < q13fields.length; i++) {
+            q13values.push(q13fields[i].value);
+        }
+
+        obj = obj + '"Q13" : "' + q13values + '",';
+
+
+        var q14values = [];
+        var q14fields = $('input:checkbox[name="q14cbox"]:checked');
+        for (var i = 0; i < q14fields.length; i++) {
+            q14values.push(q14fields[i].value);
+        }
+
+        obj = obj + '"Q14" : "' + q14values + '",';
+
+
+        var q15values = [];
+        var q15fields = $('input:checkbox[name="q15cbox"]:checked');
+        for (var i = 0; i < q15fields.length; i++) {
+            q15values.push(q15fields[i].value);
+        }
+
+        obj = obj + '"Q15" : "' + q15values + '",';
+
+
+        var q16values = [];
+        var q16fields = $('input:checkbox[name="q16cbox"]:checked');
+        for (var i = 0; i < q16fields.length; i++) {
+            q16values.push(q16fields[i].value);
+        }
+
+        obj = obj + '"Q16" : "' + q16values + '",';
+
+
+        var q17values = [];
+        var q17fields = $('input:checkbox[name="q17cbox"]:checked');
+        for (var i = 0; i < q17fields.length; i++) {
+            q17values.push(q17fields[i].value);
+        }
+
+        obj = obj + '"Q17" : "' + q17values + '",';
+
+        var q18values = [];
+        var q18fields = $('input:checkbox[name="q18cbox"]:checked');
+        for (var i = 0; i < q18fields.length; i++) {
+            q18values.push(q18fields[i].value);
+        }
+
+        obj = obj + '"Q18" : "' + q18values + '",';
+
+        var q19values = [];
+        var q19fields = $('input:checkbox[name="q19cbox"]:checked');
+        for (var i = 0; i < q19fields.length; i++) {
+            q19values.push(q19fields[i].value);
+        }
+
+        obj = obj + '"Q19" : "' + q19values + '",';
+
+        var q20values = [];
+        var q20fields = $('input:checkbox[name="q20cbox"]:checked');
+        for (var i = 0; i < q20fields.length; i++) {
+            q20values.push(q20fields[i].value);
+        }
+
+        obj = obj + '"Q20" : "' + q20values + '",';
+
+        var q21values = [];
+        var q21fields = $('input:checkbox[name="q21cbox"]:checked');
+        for (var i = 0; i < q21fields.length; i++) {
+            q21values.push(q21fields[i].value);
+        }
+
+        obj = obj + '"Q21" : "' + q21values + '",';
+
+
+        var q22values = [];
+        var q22fields = $('input:checkbox[name="q22cbox"]:checked');
+        for (var i = 0; i < q22fields.length; i++) {
+            q22values.push(q22fields[i].value);
+        }
+
+        obj = obj + '"Q22" : "' + q22values + '",';
+
+        obj = obj + '"Q23" : "' + $('input:radio[name=q23Radio]:checked').val() + '"}';
+
+
+        //get observationNumber
+        if (localStorage.observationCount) {
+            localStorage.observationCount = Number(localStorage.observationCount) + 1;
+        } else {
+            localStorage.observationCount = 1;
+        }
+
+        // Store
+        localStorage.setItem("observation" + localStorage.observationCount, obj);
+
+        alert("La observación se guardó con éxito");
+        window.scrollTo(0, 0);
+        location.reload();
+
     }
-
- obj = obj + '"Q7" : "' + q7values + '",';
-   
-
-    var q8values = [];
-    var q8fields = $('input:checkbox[name="q8cbox"]:checked');
-    for(var i = 0; i < q8fields.length; i++) {
-        q8values.push(q8fields[i].value);
-    }
-
-obj = obj + '"Q8" : "' + q8values + '",';
-
-    var q9values = [];
-    var q9fields = $('input:checkbox[name="q9cbox"]:checked');
-    for(var i = 0; i < q9fields.length; i++) {
-        q9values.push(q9fields[i].value);
-    }
-obj = obj + '"Q9" : "' + q9values + '",';
-      
-
-    var q10values = [];
-    var q10fields = $('input:checkbox[name="q10cbox"]:checked');
-    for(var i = 0; i < q10fields.length; i++) {
-        q10values.push(q10fields[i].value);
-    }
-
-obj = obj + '"Q10" : "' + q10values + '",';
-
-    var q11values = [];
-    var q11fields = $('input:checkbox[name="q11cbox"]:checked');
-    for(var i = 0; i < q11fields.length; i++) {
-        q11values.push(q11fields[i].value);
-    }
-
-obj = obj + '"Q11" : "' + q11values + '",';
-
-
-            var q12values = [];
-    var q12fields = $('input:checkbox[name="q12cbox"]:checked');
-    for(var i = 0; i < q12fields.length; i++) {
-        q12values.push(q12fields[i].value);
-    }
-
-    var q12text = $('input:text[name="q12text"]').val();
-
-    if(q12text.length>0)
-        q12values.push(q12text);
-
-
-obj = obj + '"Q12" : "' + q12values + '",';
-
-
-
-    var q13values = [];
-    var q13fields = $('input:checkbox[name="q13cbox"]:checked');
-    for(var i = 0; i < q13fields.length; i++) {
-        q13values.push(q13fields[i].value);
-    }
-
-obj = obj + '"Q13" : "' + q13values + '",';
-
-
-    var q14values = [];
-    var q14fields = $('input:checkbox[name="q14cbox"]:checked');
-    for(var i = 0; i < q14fields.length; i++) {
-        q14values.push(q14fields[i].value);
-    }
-
-obj = obj + '"Q14" : "' + q14values + '",';
-
-
-    var q15values = [];
-    var q15fields = $('input:checkbox[name="q15cbox"]:checked');
-    for(var i = 0; i < q15fields.length; i++) {
-        q15values.push(q15fields[i].value);
-    }
-
-obj = obj + '"Q15" : "' + q15values + '",';
-
-
-     var q16values = [];
-    var q16fields = $('input:checkbox[name="q16cbox"]:checked');
-    for(var i = 0; i < q16fields.length; i++) {
-        q16values.push(q16fields[i].value);
-    }
-
-obj = obj + '"Q16" : "' + q16values + '",';
-
-
-     var q17values = [];
-    var q17fields = $('input:checkbox[name="q17cbox"]:checked');
-    for(var i = 0; i < q17fields.length; i++) {
-        q17values.push(q17fields[i].value);
-    }
-
-obj = obj + '"Q17" : "' + q17values + '",';
-
-    var q18values = [];
-    var q18fields = $('input:checkbox[name="q18cbox"]:checked');
-    for(var i = 0; i < q18fields.length; i++) {
-        q18values.push(q18fields[i].value);
-    }
-
-obj = obj + '"Q18" : "' + q18values + '",';
-
-    var q19values = [];
-    var q19fields = $('input:checkbox[name="q19cbox"]:checked');
-    for(var i = 0; i < q19fields.length; i++) {
-        q19values.push(q19fields[i].value);
-    }
-
-obj = obj + '"Q19" : "' + q19values + '",';
-
-    var q20values = [];
-    var q20fields = $('input:checkbox[name="q20cbox"]:checked');
-    for(var i = 0; i < q20fields.length; i++) {
-        q20values.push(q20fields[i].value);
-    }
-
-obj = obj + '"Q20" : "' + q20values + '",';
-
-    var q21values = [];
-    var q21fields = $('input:checkbox[name="q21cbox"]:checked');
-    for(var i = 0; i < q21fields.length; i++) {
-        q21values.push(q21fields[i].value);
-    }
-
-obj = obj + '"Q21" : "' + q21values + '",';
-
-
-  var q22values = [];
-    var q22fields = $('input:checkbox[name="q22cbox"]:checked');
-    for(var i = 0; i < q22fields.length; i++) {
-        q22values.push(q22fields[i].value);
-    }
-
-obj = obj + '"Q22" : "' + q22values + '",';
-
-obj = obj + '"Q23" : "' + $('input:radio[name=q23Radio]:checked').val() + '"}';
-
-
-//get observationNumber
-if (localStorage.observationCount) {
-    localStorage.observationCount = Number(localStorage.observationCount) + 1;
-} else {
-    localStorage.observationCount = 1;
-}
-
-// Store
-localStorage.setItem("observation" + localStorage.observationCount , obj);
-
-alert("observation" + localStorage.observationCount);
-
- alert(localStorage.getItem("observation" + localStorage.observationCount)); 
-
-}
 </script>
