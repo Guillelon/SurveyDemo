@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sab Miller - Demo Survey</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <br />
+        <div class="container" id="encuestas">
+            <h2>ENCUESTAS</h2>
+
+        </div>
+        <br />
+        <br />
+
+        <div class="container" id="observaciones">
+            <h2>OBSERVACIONES</h2>
+
+
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+    if (localStorage.surveyCount ) {
+        var surveyqty = localStorage.surveyCount;
+
+    for (var i = 1; i<= surveyqty; i++) {
+        $('#encuestas').append(localStorage.getItem("survey" + i ));
+        $('#encuestas').append("<br /><br />");
+
+    };
+    }
+
+        if (localStorage.observationCount ) {
+        var observationqty = localStorage.observationCount;
+
+    for (var i = 1; i<= observationqty; i++) {
+
+
+        $('#observaciones').append(localStorage.getItem("observation" + i ));
+        $('#observaciones').append("<br /><br />");
+
+      
+
+    };
+    }
+
+
+    });
+
+
+</script>    
