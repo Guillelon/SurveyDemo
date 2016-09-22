@@ -15,6 +15,13 @@
 <body>
     <div id="wrapper">
         <br />
+        <div class="container" id="visitas">
+            <h2>VISITAS</h2>
+
+
+        </div>
+
+
         <div class="container" id="encuestas">
             <h2>ENCUESTAS</h2>
 
@@ -27,6 +34,16 @@
 
 
         </div>
+
+
+   <div class="container" id="size">
+            <h2>LOCAL STORAGE USED</h2>
+
+
+        </div>
+
+
+    
 
     </div>
 </body>
@@ -58,6 +75,31 @@
     };
     }
 
+
+    for (var i = 0; i < localStorage.length; i++){
+        var variableName = localStorage.key(i);
+
+    if(variableName.startsWith("globalCounter")){
+        var day = variableName.replace("globalCounter-", ""); 
+         $('#visitas').append("<h3>DIA " + day + "</h3>");
+          for (var j = 0; j < localStorage.length; j++){
+               var innerVariable = localStorage.key(j);
+                if((innerVariable.startsWith("counter")) && (innerVariable.endsWith("-") + day)){
+                    var hour = innerVariable.replace("counter", "").replace("-" + day, "");
+                
+          $('#visitas').append("HORA " + hour + ": " + localStorage.getItem(innerVariable) + " visitas <br /><br />");
+                     }
+                     }
+
+          $('#visitas').append("TOTAL: " + localStorage.getItem(variableName) );
+
+    }
+              
+        
+
+}
+
+          $('#size').append(unescape(encodeURIComponent(JSON.stringify(localStorage))).length);
 
     });
 
