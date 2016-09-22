@@ -84,7 +84,7 @@
          $('#visitas').append("<h3>DIA " + day + "</h3>");
           for (var j = 0; j < localStorage.length; j++){
                var innerVariable = localStorage.key(j);
-                if((innerVariable.startsWith("counter")) && (innerVariable.endsWith("-") + day)){
+                if((innerVariable.startsWith("counter")) && (innerVariable.endsWith("-" + day))){
                     var hour = innerVariable.replace("counter", "").replace("-" + day, "");
                 
           $('#visitas').append("HORA " + hour + ": " + localStorage.getItem(innerVariable) + " visitas <br /><br />");
@@ -99,7 +99,7 @@
 
 }
 
-          $('#size').append(unescape(encodeURIComponent(JSON.stringify(localStorage))).length);
+          $('#size').append(JSON.stringify(localStorage));
 
     });
 
